@@ -91,7 +91,7 @@ def send_weather(access_token, weather):
     body = {
         "touser": openId.strip(),
         "template_id": weather_template_id.strip(),
-        "url": "https://weixin.qq.com",
+        "url": "https://lvye.asia",
         "data": {
             "date": {
                 "value": today_str
