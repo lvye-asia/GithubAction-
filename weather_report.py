@@ -68,8 +68,8 @@ def get_access_token():
     return access_token
 
 
-def get_daily_love():
-    # 每日一句情话
+def get_daily_yiyan():
+    # 每日一言
     url = "https://v1.hitokoto.cn/"
     r = requests.get(url)
     all_dict = json.loads(r.text)
@@ -108,8 +108,8 @@ def send_weather(access_token, weather):
             "wind_dir": {
                 "value": weather[3]
             },
-            "today_note": {
-                "value": get_daily_love()
+            "yiyan": {
+                "value": get_daily_yiyan()
             }
         }
     }
